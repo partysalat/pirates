@@ -1,0 +1,21 @@
+version: '2'
+volumes:
+  dynamodbdata:
+    driver: local
+
+services:
+  magic-kingdom-accounting:
+    image: localhost:5000/magic-kingdom-accounting:latest
+    restart: always
+    environment:
+      AWS_ENDPOINT: http://dynamodb:8000
+    depends_on:
+      - dynamodb
+    ports:
+      - "8080:8080"
+  dynamodb:
+    image: amazon/dynamodb-local
+    restart: always
+    command: -jar DynamoDBLocal.jar -sharedDb -dbPath /home/dynamodblocal
+    volumes:
+      - dynamodbdata:/home/dynamodblocal
