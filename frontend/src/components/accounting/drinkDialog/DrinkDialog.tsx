@@ -81,7 +81,7 @@ function UsersPage({
           ...user,
           amount,
         };
-      })
+      }),
     );
   }
   return (

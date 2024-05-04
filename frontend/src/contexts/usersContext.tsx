@@ -68,6 +68,6 @@ export function useAddNewUser() {
       onError: (e: Error) => {
         toast.error(`Fehler!: ${e.message}`);
       },
-    }
+    },
   );
 }

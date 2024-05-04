@@ -32,14 +32,16 @@ export const Newsfeed = (props: Props) => {
         }
       >
         <Grid container spacing={1}>
-          {items?.pages.flat().map((newsItem) => (
-            <FeedItem
-              key={newsItem.newsId}
-              newsItem={newsItem}
-              animation={props.animation}
-              columns={4}
-            />
-          ))}
+          {items?.pages
+            .flat()
+            .map((newsItem) => (
+              <FeedItem
+                key={newsItem.newsId}
+                newsItem={newsItem}
+                animation={props.animation}
+                columns={4}
+              />
+            ))}
         </Grid>
       </InfiniteScroll>
     </div>

@@ -27,7 +27,7 @@ export interface CreateGameAchievementRequest {
   userId: string;
 }
 async function createGameAchievement(
-  data: CreateGameAchievementRequest
+  data: CreateGameAchievementRequest,
 ): Promise<unknown> {
   const res = await fetch('/api/achievement/game', {
     method: 'POST',
@@ -56,12 +56,12 @@ export function useCreateGameAchievement() {
       onError: (e: Error) => {
         toast.error(`Fehler!: ${e.message}`);
       },
-    }
+    },
   );
 }
 
 async function addDrinkForUsers(
-  data: AddDrinkToUsersRequest
+  data: AddDrinkToUsersRequest,
 ): Promise<unknown> {
   const res = await fetch('/api/users', {
     method: 'PUT',
@@ -95,7 +95,7 @@ export function useAddDrinksForUsers() {
       onError: (e: Error) => {
         toast.error(`Fehler!: ${e.message}`);
       },
-    }
+    },
   );
 }
 
@@ -140,7 +140,7 @@ async function fetchNews(params: {
 }
 
 export function useGetInfiniteNews<
-  T = DrinkNewsPayload | AchievementNewsPayload
+  T = DrinkNewsPayload | AchievementNewsPayload,
 >(filter?: NewsListFilter, limit: number = 20, enabled = true) {
   return useInfiniteQuery<News<T>[], Error>(
     [ServerStateKeysEnum.News, filter].filter(Boolean),
@@ -155,7 +155,7 @@ export function useGetInfiniteNews<
       onError: (e) => {
         toast.error(`Error fetching news: ${e.message}`);
       },
-    }
+    },
   );
 }
 
@@ -188,7 +188,7 @@ export function WebSocketProvider(props: Record<string, unknown>) {
       onOpen: () => console.log('opened'),
       //Will attempt to reconnect on all close events, such as server shutting down
       shouldReconnect: (closeEvent) => true,
-    }
+    },
   );
   const queryClient = useQueryClient();
   useEffect(() => {

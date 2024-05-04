@@ -37,16 +37,16 @@ export function useGetDrinks(drinkType: DrinkType) {
     {
       onError: (e) => {
         toast.error(
-          `Error fetching drinks for DrinkType ${drinkType}: ${e.message}`
+          `Error fetching drinks for DrinkType ${drinkType}: ${e.message}`,
         );
       },
-    }
+    },
   );
 }
 
 async function addNewDrink(
   drinkType: DrinkType,
-  drinkName: string
+  drinkName: string,
 ): Promise<unknown> {
   const res = await fetch(`/api/drinks/${drinkType}`, {
     method: 'POST',
@@ -79,6 +79,6 @@ export function useAddNewDrink() {
       onError: (e: Error) => {
         toast.error(`Fehler!: ${e.message}`);
       },
-    }
+    },
   );
 }

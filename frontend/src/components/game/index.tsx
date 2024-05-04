@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from '@reach/router';
 import { WinningUser } from './WinningUser';
 import load from 'load-script';
 import {
   Difficulty,
   useCreateGameAchievement,
 } from '../../contexts/newsContext';
+import { Link } from 'react-router-dom';
 let isLoaded = false;
 export const Game = () => {
   const [showWinningModal, setShowWinningModal] = useState(false);
@@ -51,7 +51,7 @@ export const Game = () => {
               onSuccess: () => {
                 setShowWinningModal(false);
               },
-            }
+            },
           );
           // await navigate('/');
         }}
