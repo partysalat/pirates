@@ -80,30 +80,30 @@ var AchievementDefinitions = []*common.AchievementDefinition{
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Alchemistenlehrling", Id: 10, Description: "1 Cocktail bestellt", Image: "/images/cocktail1.jpeg"},
+		Achievement: common.Achievement{Name: "Matrosenmischung", Id: 10, Description: "1 Cocktail bestellt", Image: "/images/achievements/cocktail1.jpeg"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "COCKTAIL")+countTypes(newsList, "COCKTAIL_DISENCHANTED") >= 1
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Geselle der moderaten Trankbraukünste", Id: 11, Description: "5 Cocktail bestellt", Image: "/images/cocktail5.jpeg"},
+		Achievement: common.Achievement{Name: "Freibeutermix", Id: 11, Description: "5 Cocktail bestellt", Image: "/images/achievements/cocktail5.jpeg"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "COCKTAIL")+countTypes(newsList, "COCKTAIL_DISENCHANTED") >= 5
 		},
 	}, {
-		Achievement: common.Achievement{Name: "Trank'ster", Id: 12, Description: "10 Cocktail bestellt", Image: "/images/cocktail10.jpeg"},
+		Achievement: common.Achievement{Name: "Käptn's Cocktail", Id: 12, Description: "10 Cocktail bestellt", Image: "/images/achievements/cocktail10.jpeg"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "COCKTAIL")+countTypes(newsList, "COCKTAIL_DISENCHANTED") >= 10
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Senior Trankbrauer", Id: 13, Description: "15 Cocktail bestellt", Image: "/images/cocktail15.jpeg"},
+		Achievement: common.Achievement{Name: "Admiral's Bester", Id: 13, Description: "15 Cocktail bestellt", Image: "/images/achievements/cocktail15.jpeg"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "COCKTAIL")+countTypes(newsList, "COCKTAIL_DISENCHANTED") >= 15
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Meister der Alchemie", Id: 14, Description: "20 Cocktail bestellt", Image: "/images/cocktail20.jpeg"},
+		Achievement: common.Achievement{Name: "Goldener Grogtail", Id: 14, Description: "20 Cocktail bestellt", Image: "/images/achievements/cocktail20.jpeg"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "COCKTAIL")+countTypes(newsList, "COCKTAIL_DISENCHANTED") >= 20
 		},
