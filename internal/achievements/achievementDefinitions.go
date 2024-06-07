@@ -58,82 +58,82 @@ var AchievementDefinitions = []*common.AchievementDefinition{
 			return countTypes(newsList, "BEER") >= 1
 		},
 	}, {
-		Achievement: common.Achievement{Name: "Piratenpinte", Id: 2, Description: "5 Bier bestellt", Image: "/images/achievements/beer05.jpeg"},
+		Achievement: common.Achievement{Name: "Piratenpinte", Id: 2, Description: "5 Bier bestellt", Image: "/images/achievements/beer05.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "BEER") >= 5
 		},
 	}, {
-		Achievement: common.Achievement{Name: "Schurkenstärkung", Id: 3, Description: "10 Bier bestellt", Image: "/images/achievements/beer10.jpeg"},
+		Achievement: common.Achievement{Name: "Schurkenstärkung", Id: 3, Description: "10 Bier bestellt", Image: "/images/achievements/beer10.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "BEER") >= 10
 		},
 	}, {
-		Achievement: common.Achievement{Name: "Plünderer Pils", Id: 4, Description: "15 Bier bestellt", Image: "/images/achievements/beer15.jpeg"},
+		Achievement: common.Achievement{Name: "Plünderer Pils", Id: 4, Description: "15 Bier bestellt", Image: "/images/achievements/beer15.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "BEER") >= 15
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Legendäres Lager", Id: 5, Description: "20 Bier bestellt", Image: "/images/achievements/beer20.jpeg"},
+		Achievement: common.Achievement{Name: "Legendäres Lager", Id: 5, Description: "20 Bier bestellt", Image: "/images/achievements/beer20.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "BEER") >= 20
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Matrosenmischung", Id: 10, Description: "1 Cocktail bestellt", Image: "/images/achievements/cocktail1.jpeg"},
+		Achievement: common.Achievement{Name: "Matrosenmischung", Id: 10, Description: "1 Cocktail bestellt", Image: "/images/achievements/cocktail1.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "COCKTAIL")+countTypes(newsList, "COCKTAIL_DISENCHANTED") >= 1
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Freibeutermix", Id: 11, Description: "5 Cocktail bestellt", Image: "/images/achievements/cocktail5.jpeg"},
+		Achievement: common.Achievement{Name: "Freibeutermix", Id: 11, Description: "5 Cocktail bestellt", Image: "/images/achievements/cocktail5.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "COCKTAIL")+countTypes(newsList, "COCKTAIL_DISENCHANTED") >= 5
 		},
 	}, {
-		Achievement: common.Achievement{Name: "Käptn's Cocktail", Id: 12, Description: "10 Cocktail bestellt", Image: "/images/achievements/cocktail10.jpeg"},
+		Achievement: common.Achievement{Name: "Käptn's Cocktail", Id: 12, Description: "10 Cocktail bestellt", Image: "/images/achievements/cocktail10.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "COCKTAIL")+countTypes(newsList, "COCKTAIL_DISENCHANTED") >= 10
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Admiral's Bester", Id: 13, Description: "15 Cocktail bestellt", Image: "/images/achievements/cocktail15.jpeg"},
+		Achievement: common.Achievement{Name: "Admiral's Bester", Id: 13, Description: "15 Cocktail bestellt", Image: "/images/achievements/cocktail15.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "COCKTAIL")+countTypes(newsList, "COCKTAIL_DISENCHANTED") >= 15
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Goldener Grogtail", Id: 14, Description: "20 Cocktail bestellt", Image: "/images/achievements/cocktail20.jpeg"},
+		Achievement: common.Achievement{Name: "Goldener Grogtail", Id: 14, Description: "20 Cocktail bestellt", Image: "/images/achievements/cocktail20.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "COCKTAIL")+countTypes(newsList, "COCKTAIL_DISENCHANTED") >= 20
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Küken", Id: 20, Description: "1 Softdrink bestellt", Image: "/images/softdrink1.jpeg"},
+		Achievement: common.Achievement{Name: "Matrosen-Limo", Id: 20, Description: "1 Softdrink bestellt", Image: "/images/achievements/softdrink1.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "SOFTDRINK") >= 1
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Lämmchen", Id: 21, Description: "5 Softdrinks bestellt", Image: "/images/softdrink5.jpeg"},
+		Achievement: common.Achievement{Name: "Piratenplörre", Id: 21, Description: "5 Softdrinks bestellt", Image: "/images/achievements/softdrink5.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "SOFTDRINK") >= 5
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Ferkel", Id: 22, Description: "10 Softdrinks bestellt", Image: "/images/softdrink10.jpeg"},
+		Achievement: common.Achievement{Name: "Schurkensprudel", Id: 22, Description: "10 Softdrinks bestellt", Image: "/images/achievements/softdrink10.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "SOFTDRINK") >= 10
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Kälbchen", Id: 23, Description: "15 Softdrinks bestellt", Image: "/images/softdrink15.jpeg"},
+		Achievement: common.Achievement{Name: "Wrackwasser", Id: 23, Description: "15 Softdrinks bestellt", Image: "/images/achievements/softdrink15.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "SOFTDRINK") >= 15
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Fohlen", Id: 24, Description: "20 Softdrink bestellt", Image: "/images/softdrink20.jpeg"},
+		Achievement: common.Achievement{Name: "Sprudel Sultan", Id: 24, Description: "20 Softdrink bestellt", Image: "/images/achievements/softdrink20.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "SOFTDRINK") >= 20
 		},
