@@ -53,28 +53,28 @@ func countTypes(newsList []*common.News, drinkType string) int {
 
 var AchievementDefinitions = []*common.AchievementDefinition{
 	{
-		Achievement: common.Achievement{Name: "Frodo", Id: 1, Description: "Ein Bier bestellt", Image: "/images/frodo.jpeg"},
+		Achievement: common.Achievement{Name: "Matrosenschluck", Id: 1, Description: "Ein Bier bestellt", Image: "/images/achievements/beer1.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "BEER") >= 1
 		},
 	}, {
-		Achievement: common.Achievement{Name: "Geralt von Riva", Id: 2, Description: "5 Bier bestellt", Image: "/images/beer05.jpeg"},
+		Achievement: common.Achievement{Name: "Piratenpinte", Id: 2, Description: "5 Bier bestellt", Image: "/images/achievements/beer05.jpeg"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "BEER") >= 5
 		},
 	}, {
-		Achievement: common.Achievement{Name: "Conan, der Barbar", Id: 3, Description: "10 Bier bestellt", Image: "/images/beer10.jpeg"},
+		Achievement: common.Achievement{Name: "Schurkenstärkung", Id: 3, Description: "10 Bier bestellt", Image: "/images/achievements/beer10.jpeg"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "BEER") >= 10
 		},
 	}, {
-		Achievement: common.Achievement{Name: "Tyrion Lannister", Id: 4, Description: "15 Bier bestellt", Image: "/images/beer15.jpeg"},
+		Achievement: common.Achievement{Name: "Plünderer Pils", Id: 4, Description: "15 Bier bestellt", Image: "/images/achievements/beer15.jpeg"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "BEER") >= 15
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Gandalf", Id: 5, Description: "20 Bier bestellt", Image: "/images/gandalf.jpeg"},
+		Achievement: common.Achievement{Name: "Legendäres Lager", Id: 5, Description: "20 Bier bestellt", Image: "/images/achievements/beer20.jpeg"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "BEER") >= 20
 		},
