@@ -139,6 +139,24 @@ var AchievementDefinitions = []*common.AchievementDefinition{
 		},
 	},
 	{
+		Achievement: common.Achievement{Name: "Doppeldecker Pirat", Id: 25, Description: "1 Bier + 1 Cocktail bestellt", Image: "/images/achievements/double1.webp"},
+		Predicate: func(newsList []*common.News) bool {
+			return countTypes(newsList, "COCKTAIL")+countTypes(newsList, "COCKTAIL_DISENCHANTED") >= 1 && countTypes(newsList, "BEER") >= 1
+		},
+	},
+	{
+		Achievement: common.Achievement{Name: "Doppelter Doppeldecker Pirat", Id: 26, Description: "5 Bier + 5 Cocktails bestellt", Image: "/images/achievements/double5.webp"},
+		Predicate: func(newsList []*common.News) bool {
+			return countTypes(newsList, "COCKTAIL")+countTypes(newsList, "COCKTAIL_DISENCHANTED") >= 5 && countTypes(newsList, "BEER") >= 5
+		},
+	},
+	{
+		Achievement: common.Achievement{Name: "Doppelter Doppel-Doppeldecker Pirat", Id: 27, Description: "10 Bier + 10 Cocktails bestellt", Image: "/images/achievements/double10.webp"},
+		Predicate: func(newsList []*common.News) bool {
+			return countTypes(newsList, "COCKTAIL")+countTypes(newsList, "COCKTAIL_DISENCHANTED") >= 10 && countTypes(newsList, "BEER") >= 10
+		},
+	},
+	{
 		Achievement: common.Achievement{Name: "Kanonenmeister", Id: 30, Description: "10 Shots auf einmal bestellt", Image: "/images/achievements/10shots.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			currentNews := last(newsList)
@@ -156,7 +174,7 @@ var AchievementDefinitions = []*common.AchievementDefinition{
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Wiederholung ist die Mutter der Zauberkiste", Id: 31, Description: "3x nacheinander denselben Drink bestellt", Image: "/images/zauberkiste.jpg"},
+		Achievement: common.Achievement{Name: "Das selbe nochmal", Id: 32, Description: "3x nacheinander denselben Drink bestellt", Image: "/images/achievements/samedrink3.jpg"},
 		Predicate: func(newsList []*common.News) bool {
 			currentNews := last(newsList)
 			currentNews1 := getAtReverse(newsList, 1)
