@@ -190,31 +190,31 @@ var AchievementDefinitions = []*common.AchievementDefinition{
 	// Berliner Luft
 	// ...
 	{
-		Achievement: common.Achievement{Name: "Alle Dirnen außer Frau Mutter", Id: 100, Description: "Holde Frau Mutter bestellt", Image: "/images/holde_frau_mutter.jpg"},
+		Achievement: common.Achievement{Name: "Sie nannten sie nur MUM", Id: 100, Description: "Kapitäneuse bestellt", Image: "/images/achievements/deinemudder.webp"},
 		Predicate: func(newsList []*common.News) bool {
-			return strings.Contains(getDrinkName(last(newsList)), "Holde Frau Mutter")
+			return strings.Contains(getDrinkName(last(newsList)), "Kapitäneuse")
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Bittersüß und Umamisalzig", Id: 101, Description: "Saueren Johannes bestellt", Image: "/images/sauer_salzig.jpeg"},
+		Achievement: common.Achievement{Name: "Saurer Seebär", Id: 101, Description: "Seeräubers Saurer bestellt", Image: "/images/achievements/gin-sour.webp"},
 		Predicate: func(newsList []*common.News) bool {
-			return strings.Contains(getDrinkName(last(newsList)), "Saurer Johannes")
+			return strings.Contains(getDrinkName(last(newsList)), "Seeräubers Saurer")
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Lang gebraut auf der eisigen Insel", Id: 102, Description: "Eisgebräu der langen Insel bestellt", Image: "/images/eisgebraeu.jpeg"},
+		Achievement: common.Achievement{Name: "Käpt'n Jack", Id: 102, Description: "Fluch der Karibik bestellt", Image: "/images/achievements/long-island-iced-tea.jpeg"},
 		Predicate: func(newsList []*common.News) bool {
-			return strings.Contains(getDrinkName(last(newsList)), "Eisgebräu der langen Insel")
+			return strings.Contains(getDrinkName(last(newsList)), "Fluch der Karibik")
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Nicht zu schnell trinken, Verzauberungs-Gefahr!", Id: 103, Description: "MaiTaike bestellt", Image: "/images/maitaike.png"},
+		Achievement: common.Achievement{Name: "Tiki Terror", Id: 103, Description: "Schatzinsel Zauber bestellt", Image: "/images/achievements/maitai.webp"},
 		Predicate: func(newsList []*common.News) bool {
-			return strings.Contains(getDrinkName(last(newsList)), "MaiTaike")
+			return strings.Contains(getDrinkName(last(newsList)), "Schatzinsel Zauber")
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Des Gartens Unkraut fein serviert", Id: 104, Description: "Pflanzer Punsch bestellt", Image: "/images/pflanzer_punsch.jpeg"},
+		Achievement: common.Achievement{Name: "Rum Raider", Id: 104, Description: "Captain's Punch", Image: "/images/achievements/planters-punch.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return strings.Contains(getDrinkName(last(newsList)), "Pflanzer Punsch")
 		},
