@@ -220,66 +220,15 @@ var AchievementDefinitions = []*common.AchievementDefinition{
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Hilft auch gegen Ungeziefer im Schrank", Id: 105, Description: "Minztrank bestellt", Image: "/images/minztrunk.jpg"},
+		Achievement: common.Achievement{Name: "Havana Held", Id: 105, Description: "Blackbeards Liebster bestellt", Image: "/images/achievements/mojito.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return strings.Contains(getDrinkName(last(newsList)), "Minztrank")
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Betreten verboten!", Id: 106, Description: "Dünenbesteigung bestellt", Image: "/images/duenenbesteigung.jpeg"},
-		Predicate: func(newsList []*common.News) bool {
-			return strings.Contains(getDrinkName(last(newsList)), "Dünenbesteigung")
-		},
-	},
-	{
-		Achievement: common.Achievement{Name: "Obacht! Sorgt für nachlassenden Haarwuchs", Id: 107, Description: "Moskauer Maultiersaft bestellt", Image: "/images/maultiersaft.jpeg"},
-		Predicate: func(newsList []*common.News) bool {
-			return strings.Contains(getDrinkName(last(newsList)), "Moskauer Maultiersaft")
-		},
-	},
-	{
-		Achievement: common.Achievement{Name: "Ergibt gekocht einen herrlichen Kuchen", Id: 108, Description: "Weißer Rus bestellt", Image: "/images/weisser_rus.jpeg"},
-		Predicate: func(newsList []*common.News) bool {
-			return strings.Contains(getDrinkName(last(newsList)), "Weißer Rus")
-		},
-	},
-	{
-		Achievement: common.Achievement{Name: "Holt die Fackeln und Mistgabeln!", Id: 109, Description: "Widergänger bestellt", Image: "/images/widergaenger.jpeg"},
+		Achievement: common.Achievement{Name: "Verfluchter Freibeuter", Id: 109, Description: "Einmal Kielholen bestellt", Image: "/images/achievements/zombie.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return strings.Contains(getDrinkName(last(newsList)), "Widergänger")
-		},
-	},
-	{
-		Achievement: common.Achievement{Name: "Kann bei übermäßigem Verzehr abführend wirken", Id: 110, Description: "Roter Sandtrank bestellt", Image: "/images/roter_sandtrank.jpeg"},
-		Predicate: func(newsList []*common.News) bool {
-			return strings.Contains(getDrinkName(last(newsList)), "Roter Sandtrank")
-		},
-	},
-	{
-		Achievement: common.Achievement{Name: "Macht besonderes wachsam (Spitzbube -> Spitzel -> Spitz -> Wachhund)", Id: 111, Description: "Spitzbube bestellt", Image: "/images/spitzbube.jpeg"},
-		Predicate: func(newsList []*common.News) bool {
-			return strings.Contains(getDrinkName(last(newsList)), "Spitzbube")
-		},
-	},
-	{
-		Achievement: common.Achievement{Name: "Zu empfehlen bei gutem und schlechtem Wetter", Id: 112, Description: "Dunkler Sturmtrank", Image: "/images/dunkler_sturmtrank.jpg"},
-		Predicate: func(newsList []*common.News) bool {
-			return strings.Contains(getDrinkName(last(newsList)), "Dunkler Sturmtrank")
-		},
-	},
-	{
-		Achievement: common.Achievement{Name: "Willkommen in der A BRA Kada BRA", Id: 113, Description: "Tote Fichte innerhalb der ersten beiden Tage bestellt", Image: "/images/tote_fichte.jpeg"},
-		Predicate: func(newsList []*common.News) bool {
-			news := last(newsList)
-			firstDay := time.Date(2022, time.July, 10, 12, 0, 0, 0, time.UTC)
-			secondDay := time.Date(2022, time.July, 11, 12, 0, 0, 0, time.UTC)
-			return getDrinkName(news) == "Tote Fichte" && (news.CreatedAt.Day() == firstDay.Day() || news.CreatedAt.Day() == secondDay.Day())
-		},
-	},
-	{
-		Achievement: common.Achievement{Name: "Im Spiegelland auch Inorgen Ybur genannt", Id: 114, Description: "Rubinnektar bestellt", Image: "/images/ruby_negroni.jpeg"},
-		Predicate: func(newsList []*common.News) bool {
-			return strings.Contains(getDrinkName(last(newsList)), "Rubinnektar")
 		},
 	},
 	{
@@ -288,18 +237,7 @@ var AchievementDefinitions = []*common.AchievementDefinition{
 			return strings.Contains(getDrinkName(last(newsList)), "Hexer:innenbrause")
 		},
 	},
-	{
-		Achievement: common.Achievement{Name: "Schmecket als Obst und als Gemüse, Zaubergurke!", Id: 116, Description: "Gurkenheinrich bestellt", Image: "/images/gurkenheinrich.jpeg"},
-		Predicate: func(newsList []*common.News) bool {
-			return strings.Contains(getDrinkName(last(newsList)), "Gurkenheinrich")
-		},
-	},
-	{
-		Achievement: common.Achievement{Name: "Seid ihr der König? Also ich hab euch nicht gewählt.", Id: 117, Description: "Macbeth bestellt", Image: "/images/macbeth.jpeg"},
-		Predicate: func(newsList []*common.News) bool {
-			return strings.Contains(getDrinkName(last(newsList)), "Macbeth")
-		},
-	},
+	//TODO: G.O.A.T. achievement
 
 	// are set manually
 	{
