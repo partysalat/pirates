@@ -182,7 +182,7 @@ var AchievementDefinitions = []*common.AchievementDefinition{
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Das selbe nochmal", Id: 32, Description: "3x nacheinander denselben Drink bestellt", Image: "/images/achievements/samedrink3.jpg"},
+		Achievement: common.Achievement{Name: "Das selbe nochmal", Id: 32, Description: "3x nacheinander denselben Drink bestellt", Image: "/images/achievements/samedrink3.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			currentNews := last(newsList)
 			currentNews1 := getAtReverse(newsList, 1)

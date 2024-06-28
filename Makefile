@@ -10,6 +10,8 @@ restart_infra: stop_infra start_infra
 start_local:
 	go run .
 
+clean_start:stop_infra start_infra start_local
+
 build_docker_arm:
 	docker buildx build --platform linux/arm64 --progress=plain  -t bra:5000/magic-kingdom-accounting:latest -m 4g .
 build:
