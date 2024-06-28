@@ -32,9 +32,9 @@ export const MainLayout: React.FC = () => {
                 />
               </a>
             </Grid>
-            <Grid item xs={6}>
-              <MedievalMeme />
-            </Grid>
+            {/*<Grid item xs={6}>*/}
+            {/*  <MedievalMeme />*/}
+            {/*</Grid>*/}
             <Grid item xs={12}>
               <Newsfeed animation="animate__animated animate__fadeInUp" />
             </Grid>

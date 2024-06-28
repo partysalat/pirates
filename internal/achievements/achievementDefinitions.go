@@ -66,7 +66,7 @@ var AchievementDefinitions = []*common.AchievementDefinition{
 			return countTypes(newsList, "BEER") >= 1
 		},
 	}, {
-		Achievement: common.Achievement{Name: "Piratenpinte", Id: 2, Description: "5 Bier bestellt", Image: "/images/achievements/beer05.webp"},
+		Achievement: common.Achievement{Name: "Piratenpinte", Id: 2, Description: "5 Bier bestellt", Image: "/images/achievements/beer5.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "BEER") >= 5
 		},
@@ -168,7 +168,7 @@ var AchievementDefinitions = []*common.AchievementDefinition{
 		Achievement: common.Achievement{Name: "Kanonenmeister", Id: 30, Description: "10 Shots auf einmal bestellt", Image: "/images/achievements/10shots.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			currentNews := last(newsList)
-			return getDrinkType(currentNews) == "SHOT" && getAmount(currentNews) >= 15
+			return getDrinkType(currentNews) == "SHOT" && getAmount(currentNews) >= 10
 		},
 	},
 	{
