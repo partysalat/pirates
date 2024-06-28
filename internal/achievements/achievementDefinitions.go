@@ -26,6 +26,14 @@ func last(newsList []*common.News) *common.News {
 	}
 	return newsList[len(newsList)-1]
 }
+func containsDrink(newsList []*common.News, drinkName string) bool {
+	for _, newsItem := range newsList {
+		if strings.Contains(getDrinkName(newsItem), drinkName) {
+			return true
+		}
+	}
+	return false
+}
 func getAtReverse(newsList []*common.News, index int) *common.News {
 	if len(newsList) <= index {
 		return nil
@@ -214,30 +222,35 @@ var AchievementDefinitions = []*common.AchievementDefinition{
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Rum Raider", Id: 104, Description: "Captain's Punch", Image: "/images/achievements/planters-punch.webp"},
+		Achievement: common.Achievement{Name: "Rum Raider", Id: 104, Description: "Captain's Punch bestellt", Image: "/images/achievements/planters-punch.webp"},
 		Predicate: func(newsList []*common.News) bool {
-			return strings.Contains(getDrinkName(last(newsList)), "Pflanzer Punsch")
+			return strings.Contains(getDrinkName(last(newsList)), "Captain's Punch")
 		},
 	},
 	{
 		Achievement: common.Achievement{Name: "Havana Held", Id: 105, Description: "Blackbeards Liebster bestellt", Image: "/images/achievements/mojito.webp"},
 		Predicate: func(newsList []*common.News) bool {
-			return strings.Contains(getDrinkName(last(newsList)), "Minztrank")
+			return strings.Contains(getDrinkName(last(newsList)), "Blackbeards Liebster")
 		},
 	},
 	{
 		Achievement: common.Achievement{Name: "Verfluchter Freibeuter", Id: 109, Description: "Einmal Kielholen bestellt", Image: "/images/achievements/zombie.webp"},
 		Predicate: func(newsList []*common.News) bool {
-			return strings.Contains(getDrinkName(last(newsList)), "Widergänger")
+			return strings.Contains(getDrinkName(last(newsList)), "Einmal Kielholen")
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Hexerei und Gaukelei liegen dicht beieinander", Id: 115, Description: "Hexer:innenbrause bestellt", Image: "/images/tschunk.png"},
+		Achievement: common.Achievement{Name: "Kapitän Tschunksegel und der Kampf um den goldenen Grogtail", Id: 115, Description: "Kapitän Tschunksegel bestellt", Image: "/images/achievements/tschunk.webp"},
 		Predicate: func(newsList []*common.News) bool {
-			return strings.Contains(getDrinkName(last(newsList)), "Hexer:innenbrause")
+			return strings.Contains(getDrinkName(last(newsList)), "Kapitän Tschunksegel")
 		},
 	},
-	//TODO: G.O.A.T. achievement
+	{
+		Achievement: common.Achievement{Name: "Greatest of all Time", Id: 115, Description: "Alle Cocktails mindestens 1x bestellt", Image: "/images/achievements/goat.webp"},
+		Predicate: func(newsList []*common.News) bool {
+			return containsDrink(newsList, "Kapitäneuse") && containsDrink(newsList, "Seeräubers Saurer") && containsDrink(newsList, "Fluch der Karibik") && containsDrink(newsList, "Schatzinsel Zauber") && containsDrink(newsList, "Captain's Punch") && containsDrink(newsList, "Blackbeards Liebster") && containsDrink(newsList, "Einmal Kielholen") && containsDrink(newsList, "Kapitän Tschunksegel")
+		},
+	},
 
 	// are set manually
 	{
