@@ -1,0 +1,8 @@
+.dialog-content{
+  overflow-x:hidden;
+}
+
+.clickable-modal{
+  display: inline;
+  cursor: pointer;
+}

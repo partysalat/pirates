@@ -21,6 +21,7 @@ import {
 import styles from './bestlist.module.css';
 import { useIntervalScrolling } from './useIntervalScrolling';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ClickableAchievementModal } from '../achievementModal';
 
 type Props = {
   withAutoScroll?: boolean;
@@ -177,16 +178,18 @@ export const Bestlist: React.FC<Props> = (props) => {
 
             <TableCell size="small" align="right" sx={{ border: 0 }}>
               {row.achievements.map((payload) => (
-                <Tooltip
-                  key={payload.id}
-                  title={`${payload.name}: ${payload.description}`}
-                >
-                  <Avatar
-                    alt={payload.name}
-                    src={payload.image}
-                    className={`${styles['avatar-small']} animated jackInTheBox`}
-                  />
-                </Tooltip>
+                <ClickableAchievementModal achievement={payload}>
+                  <Tooltip
+                    key={payload.id}
+                    title={`${payload.name}: ${payload.description}`}
+                  >
+                    <Avatar
+                      alt={payload.name}
+                      src={payload.image}
+                      className={`${styles['avatar-small']} animated jackInTheBox`}
+                    />
+                  </Tooltip>
+                </ClickableAchievementModal>
               ))}
             </TableCell>
           </TableRow>

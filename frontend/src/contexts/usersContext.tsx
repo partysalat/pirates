@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 export type UserDrinkCounts = {
   [key in DrinkType]: string;
 };
-type Achievement = {
+export type Achievement = {
   id: number;
   name: string;
   description: string;
