@@ -3,6 +3,7 @@ import React from 'react';
 import { AchievementNews, DrinkNews, News } from '../../contexts/newsContext';
 import { format } from 'date-fns';
 import 'animate.css';
+import { ClickableAchievementModal } from '../achievementModal';
 
 const typeToImageMap = {
   COCKTAIL: '/images/cocktail3.jpeg',
@@ -60,28 +61,30 @@ const AchievementNewsItem = ({
 }) => {
   return (
     <Grid item xs={12 / columns} style={{ height: '100%' }}>
-      <Card
-        className={animation}
-        style={{ backgroundColor: 'rgba(36,36,36,0.5)' }}
-      >
-        <CardMedia
-          component="img"
-          height="100"
-          image={newsItem.payload.achievement.image}
-          alt="green iguana"
-        />
+      <ClickableAchievementModal achievement={newsItem.payload.achievement}>
+        <Card
+          className={animation}
+          style={{ backgroundColor: 'rgba(36,36,36,0.5)' }}
+        >
+          <CardMedia
+            component="img"
+            height="100"
+            image={newsItem.payload.achievement.image}
+            alt="green iguana"
+          />
 
-        <CardContent>
-          <Typography variant="body2">
-            {newsItem.payload.user.name} hat "
-            {newsItem.payload.achievement.name}" erreicht. (
-            {newsItem.payload.achievement.description})
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {format(new Date(newsItem.createdAt), 'dd.MM.yyyy HH:mm')}
-          </Typography>
-        </CardContent>
-      </Card>
+          <CardContent>
+            <Typography variant="body2">
+              {newsItem.payload.user.name} hat "
+              {newsItem.payload.achievement.name}" erreicht. (
+              {newsItem.payload.achievement.description})
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              {format(new Date(newsItem.createdAt), 'dd.MM.yyyy HH:mm')}
+            </Typography>
+          </CardContent>
+        </Card>
+      </ClickableAchievementModal>
     </Grid>
   );
 };

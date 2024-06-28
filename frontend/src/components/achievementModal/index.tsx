@@ -4,9 +4,10 @@ import { CardMedia, Dialog, DialogContent, DialogTitle } from '@mui/material';
 import styles from './achievementModal.module.css';
 import { DialogComponentProps } from '../accounting/accountingButton/AccountingButtonWithDrinkDialog';
 import { Achievement } from '../../contexts/usersContext';
+import { Achievement as NewsAchievement } from '../../contexts/newsContext';
 
 interface Props extends DialogComponentProps {
-  achievement: Achievement;
+  achievement: Achievement | NewsAchievement;
 }
 export const ClickableAchievementModal: React.FC<
   PropsWithChildren<Omit<Props, 'onClose' | 'open'>>
