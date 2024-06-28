@@ -94,24 +94,24 @@ var AchievementDefinitions = []*common.AchievementDefinition{
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Freibeutermix", Id: 11, Description: "5 Cocktail bestellt", Image: "/images/achievements/cocktail5.webp"},
+		Achievement: common.Achievement{Name: "Freibeutermix", Id: 11, Description: "5 Cocktails bestellt", Image: "/images/achievements/cocktail5.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "COCKTAIL")+countTypes(newsList, "COCKTAIL_DISENCHANTED") >= 5
 		},
 	}, {
-		Achievement: common.Achievement{Name: "Käptn's Cocktail", Id: 12, Description: "10 Cocktail bestellt", Image: "/images/achievements/cocktail10.webp"},
+		Achievement: common.Achievement{Name: "Käptn's Cocktail", Id: 12, Description: "10 Cocktails bestellt", Image: "/images/achievements/cocktail10.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "COCKTAIL")+countTypes(newsList, "COCKTAIL_DISENCHANTED") >= 10
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Admiral's Bester", Id: 13, Description: "15 Cocktail bestellt", Image: "/images/achievements/cocktail15.webp"},
+		Achievement: common.Achievement{Name: "Admiral's Bester", Id: 13, Description: "15 Cocktails bestellt", Image: "/images/achievements/cocktail15.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "COCKTAIL")+countTypes(newsList, "COCKTAIL_DISENCHANTED") >= 15
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Goldener Grogtail", Id: 14, Description: "20 Cocktail bestellt", Image: "/images/achievements/cocktail20.webp"},
+		Achievement: common.Achievement{Name: "Goldener Grogtail", Id: 14, Description: "20 Cocktails bestellt", Image: "/images/achievements/cocktail20.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return countTypes(newsList, "COCKTAIL")+countTypes(newsList, "COCKTAIL_DISENCHANTED") >= 20
 		},
@@ -198,7 +198,7 @@ var AchievementDefinitions = []*common.AchievementDefinition{
 	// Berliner Luft
 	// ...
 	{
-		Achievement: common.Achievement{Name: "Sie nannten sie nur MUM", Id: 100, Description: "Kapitäneuse bestellt", Image: "/images/achievements/deinemudder.webp"},
+		Achievement: common.Achievement{Name: "Sie nannten sie MUM", Id: 100, Description: "Kapitäneuse bestellt", Image: "/images/achievements/deinemudder.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return strings.Contains(getDrinkName(last(newsList)), "Kapitäneuse")
 		},
