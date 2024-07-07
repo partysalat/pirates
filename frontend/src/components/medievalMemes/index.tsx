@@ -3,52 +3,35 @@ import { SwitchTransition, CSSTransition } from 'react-transition-group';
 import './style.css';
 const duration = 500;
 
-const MEMES = [
-  'badass-over-here-bayeux.jpeg',
-  'bitch_please.jpeg',
-  'datass.jpeg',
-  'einfach-mal-fresse-halten.jpeg',
-  'facebook_essen_fotografieren.jpeg',
-  'fuck-the-police.jpeg',
-  'halt_stop_frauentausch.jpeg',
-  'hammertime.jpeg',
-  'HatersGonnaHate.jpeg',
-  'I-Got-99-Problems-But-a-Bitch-Aint-One.jpeg',
-  'LikeaBoss.png',
-  'not-sure-if-trolling-bayeux.jpeg',
-  'Picsoritdidnthappen.jpeg',
-  'seemerollin.jpeg',
-  'shut_up_take_money.jpeg',
-  'totally_worth_it.jpeg',
-  'true-story-bayeux.jpeg',
-  'Trustme.jpeg',
-  'yolo.jpeg',
-  'you-only-had-one-job.jpeg',
-  'lambda.jpeg',
-  'meme-what-she-said.jpg',
-  'MFMI36W.jpeg',
-  'one_ale.jpeg',
+const MEMES: string[] = [
+  'blaubaer.webp',
+  'legurk.webp',
+  'gisela.webp',
+  'piraten_gemuese.webp',
+  'nerf.webp',
+  'flunkyball.webp',
+  'schlackerschwerter.webp',
 ];
 
-export const MedievalMeme = () => {
-  const [meme, setMeme] = useState(MEMES[0]);
+export const PictureSlideShow = () => {
+  const [image, setImage] = useState(MEMES[0]);
   useEffect(() => {
     const interval = setInterval(() => {
-      setMeme(MEMES[Math.floor(Math.random() * MEMES.length)]);
-    }, 15000);
+      setImage(MEMES[Math.floor(Math.random() * MEMES.length)]);
+    }, 3000);
     return () => {
       clearInterval(interval);
     };
   }, []);
-  // return <div style={{ width: '100%', height: "100%" }} src={`images/memes/${meme}`} />;
+  // return <div style={{ width: '100%', height: "100%" }} src={`images/memes/${image}`} />;
 
   return (
     <SwitchTransition>
-      <CSSTransition key={meme} timeout={duration} classNames="fade">
+      <CSSTransition key={image} timeout={duration} classNames="fade">
         <div
           style={{
             height: '100%',
-            backgroundImage: `url(images/memes/${meme})`,
+            backgroundImage: `url(images/slideshow/${image})`,
             backgroundSize: 'contain',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',

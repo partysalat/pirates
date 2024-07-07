@@ -1,5 +1,5 @@
 import React from 'react';
-import { MedievalMeme } from '../components/medievalMemes';
+import { PictureSlideShow } from '../components/medievalMemes';
 import { Grid } from '@mui/material';
 import { Bestlist } from '../components/bestlist';
 import { Newsfeed } from '../components/newsfeed';
@@ -32,9 +32,9 @@ export const MainLayout: React.FC = () => {
                 />
               </a>
             </Grid>
-            {/*<Grid item xs={6}>*/}
-            {/*  <MedievalMeme />*/}
-            {/*</Grid>*/}
+            <Grid item xs={6}>
+              <PictureSlideShow />
+            </Grid>
             <Grid item xs={12}>
               <Newsfeed animation="animate__animated animate__fadeInUp" />
             </Grid>
