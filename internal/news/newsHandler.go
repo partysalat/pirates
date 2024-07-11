@@ -148,11 +148,11 @@ func CreateGameAchievement(ctx *fasthttp.RequestCtx) {
 	var createGameAchievementRequest CreateGameAchievementRequest
 	json.Unmarshal(ctx.PostBody(), &createGameAchievementRequest)
 	userDto, err := user.GetUserFromDb(PartyName, createGameAchievementRequest.UserId)
-	var wannabeAchievement = getAchievementWithId(21)
+	var wannabeAchievement = getAchievementWithId(200)
 	if createGameAchievementRequest.Difficulty == "normal" {
-		wannabeAchievement = getAchievementWithId(22)
+		wannabeAchievement = getAchievementWithId(201)
 	} else if createGameAchievementRequest.Difficulty == "hard" {
-		wannabeAchievement = getAchievementWithId(23)
+		wannabeAchievement = getAchievementWithId(202)
 	}
 	if err != nil {
 		ctx.Error(fmt.Sprintf("Error while getting drink: %s", err.Error()), 400)
