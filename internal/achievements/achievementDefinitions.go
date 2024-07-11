@@ -254,19 +254,19 @@ var AchievementDefinitions = []*common.AchievementDefinition{
 
 	// are set manually
 	{
-		Achievement: common.Achievement{Name: "Bewahrer der Toten Fichte", Id: 200, Description: "Turmverteidigung (leicht) gewonnen", Image: "/images/turmverteidigung_1.jpeg"},
+		Achievement: common.Achievement{Name: "Käptn Tschunksegel und der Kampf um die tote Fichte", Id: 200, Description: "Turmverteidigung (leicht) gewonnen", Image: "/images/achievements/game_easy.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return false
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Ich seh den Wald vor lauter Toter Fichten nicht mehr", Id: 201, Description: "Turmverteidigung (normal) gewonnen", Image: "/images/turmverteidigung_2.jpeg"},
+		Achievement: common.Achievement{Name: "Piraten der Toten Fichte, vereinigt euch!", Id: 201, Description: "Turmverteidigung (normal) gewonnen", Image: "/images/achievements/game_mid.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return false
 		},
 	},
 	{
-		Achievement: common.Achievement{Name: "Endlich abgesägt und weiterverarbeitet", Id: 202, Description: "Turmverteidigung (schwer) gewonnen", Image: "/images/turmverteidigung_3.jpeg"},
+		Achievement: common.Achievement{Name: "Ein neues Boot tut not", Id: 202, Description: "Turmverteidigung (schwer) gewonnen", Image: "/images/achievements/game_hard.webp"},
 		Predicate: func(newsList []*common.News) bool {
 			return false
 		},
