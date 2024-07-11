@@ -18,7 +18,7 @@ export const PictureSlideShow = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setImage(MEMES[Math.floor(Math.random() * MEMES.length)]);
-    }, 3000);
+    }, 15000);
     return () => {
       clearInterval(interval);
     };
