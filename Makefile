@@ -15,7 +15,7 @@ clean_start:stop_infra start_infra start_local
 build_docker_arm:
 	docker buildx build --platform linux/arm64 --progress=plain  -t bra:5000/magic-kingdom-accounting:latest -m 4g .
 build:
-	docker build --progress=plain -t magic-kingdom-accounting .
+	docker build --progress=plain -t bra:5000/magic-kingdom-accounting:latest .
 build_frontend:
 	cd frontend; npm run build
 start: build
