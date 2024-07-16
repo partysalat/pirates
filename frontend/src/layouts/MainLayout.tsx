@@ -27,7 +27,7 @@ export const MainLayout: React.FC = () => {
               <a href="/game">
                 <img
                   className="animate__animated animate__pulse"
-                  src="images/turm_verteidigung_logo.png"
+                  src="images/logo.png"
                   style={{ width: '100%', animationIterationCount: 'infinite' }}
                 />
               </a>
