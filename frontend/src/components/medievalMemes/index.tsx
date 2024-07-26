@@ -11,6 +11,13 @@ const MEMES: string[] = [
   'nerf.webp',
   'flunkyball.webp',
   'schlackerschwerter.webp',
+  'octobpus.webp',
+  'selma.webp',
+  'glorb.webp',
+  'unicorn.webp',
+  'pi.webp',
+  'treasure_island.webp',
+  'port_royale.webp',
 ];
 
 export const PictureSlideShow = () => {
